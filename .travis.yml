@@ -10,3 +10,9 @@ before-install:
 script:
     - docker build -t simple-service -f Dockerfile_build .
 
+deploy:
+    provider: script
+    script: bash docker_push.sh
+    on:
+        branch: master
+    
