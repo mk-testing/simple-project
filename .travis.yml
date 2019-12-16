@@ -1,0 +1,12 @@
+language: java
+
+services:
+    - docker
+
+before-install:
+    - docker pull maven:3-jdk-8-slim
+    - docker build -t simple-service-baseimage -f Dockerfile_platform .
+
+script:
+    - docker build -t simple-service -f Dockerfile_build .
+
