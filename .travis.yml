@@ -12,5 +12,5 @@ script:
 
 deploy:
     provider: script
-    script: bash docker_push.sh
+    script: bash docker-push.sh
     
