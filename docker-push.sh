@@ -2,4 +2,6 @@
 
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push mk8testing/simple-service:latest
+echo "Local images:"
+docker images
+docker push $DOCKER_USERNAME/simple-service:latest
