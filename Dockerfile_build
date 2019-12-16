@@ -1,0 +1,8 @@
+FROM simple-service-baseimage
+
+COPY ./pom.xml /source/pom.xml
+COPY ./src /source/src
+WORKDIR /source
+
+#RUN mvn compiler:compile
+RUN mvn -offline compiler:compile

@@ -1,0 +1,7 @@
+FROM simple-service
+
+WORKDIR /source
+EXPOSE 8080
+
+CMD mvn exec:java -offline -Dexec.mainClass="com.example.Main"
+
