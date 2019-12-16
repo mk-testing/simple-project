@@ -9,6 +9,7 @@ before-install:
 
 script:
     - docker build -t simple-service -f Dockerfile_build .
+    - docker tag simple-service mk8testing/simple-service
 
 deploy:
     provider: script
