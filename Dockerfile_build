@@ -1,5 +1,7 @@
 FROM simple-service-baseimage
 
+RUN echo "Run build at <BUILD_TIMESTAMP>"
+
 COPY ./pom.xml /source/pom.xml
 COPY ./src /source/src
 WORKDIR /source

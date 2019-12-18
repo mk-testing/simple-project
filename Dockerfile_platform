@@ -1,5 +1,7 @@
 FROM maven:3-jdk-8-slim
 
+RUN echo "Run build at <BUILD_TIMESTAMP>"
+
 COPY ./pom.xml /source/pom.xml
 WORKDIR /source
 
